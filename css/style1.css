@@ -1,0 +1,546 @@
+.frame {
+  background-color: var(--bg);
+  overflow: hidden;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 880px;
+  position: relative;
+}
+
+.frame .img {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 1400px;
+  height: 880px;
+}
+
+.frame .ellipse {
+  top: 0;
+  left: 632px;
+  width: 678px;
+  height: 657px;
+  position: absolute;
+  aspect-ratio: 1;
+}
+
+.frame .div {
+  top: 104px;
+  left: 372px;
+  width: 478px;
+  height: 478px;
+  background-color: #bbdefb80;
+  border-radius: 239px;
+  filter: blur(50px);
+  position: absolute;
+  aspect-ratio: 1;
+}
+
+.frame .vector-wrapper {
+  position: absolute;
+  top: -13px;
+  left: -88px;
+  width: 400px;
+  height: 698px;
+  display: flex;
+}
+
+.frame .vector {
+  margin-top: 13px;
+  width: 284.87px;
+  height: 283.19px;
+  margin-left: 88px;
+}
+
+.frame .vector-2 {
+  position: absolute;
+  top: 624px;
+  left: 0;
+  width: 320px;
+  height: 256px;
+}
+
+.frame .img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 1108px;
+  width: 400px;
+  height: 687px;
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.frame .vector-3 {
+  margin-top: 363.3px;
+  width: 359.65px;
+  height: 323.67px;
+  margin-left: 68px;
+  transform: rotate(-180deg);
+}
+
+.frame .vector-4 {
+  position: absolute;
+  top: 538px;
+  left: 1037px;
+  width: 403px;
+  height: 342px;
+}
+
+.frame .div-2 {
+  position: absolute;
+  top: 75px;
+  left: 1015px;
+  width: 390px;
+  height: 149px;
+}
+
+.frame .div-3 {
+  display: inline-flex;
+  height: 119px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--border);
+}
+
+.frame .image {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.frame .div-4 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+  margin-bottom: -0.45px;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h6-font-family);
+  font-weight: var(--h6-font-weight);
+  color: #000000;
+  font-size: var(--h6-font-size);
+  text-align: center;
+  letter-spacing: var(--h6-letter-spacing);
+  line-height: var(--h6-line-height);
+  font-style: var(--h6-font-style);
+}
+
+.frame .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 326px;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #000000;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  font-style: var(--body-font-style);
+}
+
+.frame .mynaui-pin-solid {
+  position: absolute;
+  top: 9px;
+  left: 365px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+}
+
+.frame .vector-5 {
+  position: absolute;
+  width: 81.33%;
+  height: 81.33%;
+  top: 9.37%;
+  left: 9.3%;
+}
+
+.frame .group-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 636px;
+  left: 952px;
+}
+
+.frame .group {
+  position: relative;
+  width: 462px;
+  height: 121px;
+  margin-right: -2px;
+}
+
+.frame .div-5 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 29px;
+  left: 43px;
+  background-color: #085dc5;
+  border-radius: 5px 50px 50px 40px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px #085dc540;
+}
+
+.frame .lets-icons-message {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  aspect-ratio: 1;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.frame .div-6 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .hiremesh-helped-me {
+  position: relative;
+  width: 339px;
+  margin-top: -1px;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #ffffff;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  font-style: var(--body-font-style);
+}
+
+.frame .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .bi-cursor-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  transform: rotate(-90deg);
+  aspect-ratio: 1;
+}
+
+.frame .vector-6 {
+  position: absolute;
+  width: 85.8%;
+  height: 85.8%;
+  top: 5.54%;
+  left: -5.54%;
+  transform: rotate(90deg);
+}
+
+.frame .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 639px;
+  left: 52px;
+  transform: rotate(180deg);
+}
+
+.frame .group-2 {
+  position: relative;
+  width: 450px;
+  height: 121px;
+}
+
+.frame .div-7 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 29px;
+  left: 43px;
+  background-color: #0d519b;
+  border-radius: 5px 50px 50px 40px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px #085dc540;
+}
+
+.frame .text-wrapper-4 {
+  position: relative;
+  width: 327px;
+  margin-top: -1px;
+  transform: rotate(180deg);
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #ffffff;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  font-style: var(--body-font-style);
+}
+
+.frame .text-wrapper-5 {
+  position: relative;
+  align-self: stretch;
+  transform: rotate(180deg);
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .healthicons-ui-user {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  transform: rotate(180deg);
+  aspect-ratio: 1;
+  background-image: url(./img/healthicons-ui-user-profile.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.frame .div-8 {
+  display: flex;
+  flex-direction: column;
+  width: 823px;
+  align-items: center;
+  gap: 18px;
+  position: absolute;
+  top: 175px;
+  left: 308px;
+}
+
+.frame .turn-your-skills-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .turn-your-skills {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: #0e315d;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .div-wrapper-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper-6 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1px;
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  color: var(--text-2);
+  font-size: var(--h3-font-size);
+  text-align: center;
+  letter-spacing: var(--h3-letter-spacing);
+  line-height: var(--h3-line-height);
+  font-style: var(--h3-font-style);
+}
+
+.frame .frame-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  height: 56px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 18px;
+  position: relative;
+}
+
+.frame .div-9 {
+  display: flex;
+  width: 482px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.frame .CTA {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 25px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--primary);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.frame .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  color: var(--sidebar);
+  font-size: var(--h4-font-size);
+  letter-spacing: var(--h4-letter-spacing);
+  line-height: var(--h4-line-height);
+  font-style: var(--h4-font-style);
+}
+
+.frame .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 25px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--primary);
+}
+
+.frame .text-wrapper-8 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  color: var(--primary);
+  font-size: var(--h4-font-size);
+  letter-spacing: var(--h4-letter-spacing);
+  line-height: var(--h4-line-height);
+  font-style: var(--h4-font-style);
+}
+
+.frame .div-10 {
+  position: absolute;
+  top: 52px;
+  left: 30px;
+  width: 390px;
+  height: 177px;
+}
+
+.frame .div-11 {
+  display: inline-flex;
+  height: 119px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--border);
+}
+
+.frame .text-wrapper-9 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 347px;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  color: #000000;
+  font-size: var(--body-font-size);
+  letter-spacing: var(--body-letter-spacing);
+  line-height: var(--body-line-height);
+  font-style: var(--body-font-style);
+}
+
+.frame .mynaui-pin-solid-2 {
+  position: absolute;
+  top: 39px;
+  left: 381px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+}

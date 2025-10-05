@@ -1,0 +1,754 @@
+/* Find Jobs Section — Ketika sidebar aktif, geser ke kiri */
+.findjobs-section {
+    background-color: var(--bg);
+    padding: 100px 20px;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 100px;
+    transition: margin-right 0.3s ease;
+}
+.container {
+    max-width: none; /* HAPUS max-width agar full width */
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible; /* Agar content-wrapper yang handle scroll */
+}
+
+/* Search Filter Bar (Mobile & Tablet Only) */
+.search-filter-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 0px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.search-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--text-2);
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 48px;
+    border: 1px solid var(--border);
+    border-radius: 50px; /* samakan dengan .search-box */
+    font-size: 14px;
+    font-family: var(--body-font-family);
+    transition: border-color 0.3s, box-shadow 0.3s; /* biar smooth saat fokus */
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.filter-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--card); /* putih */
+    color: var(--primary); /* font warna primary */
+    border: 1px solid var(--primary); /* border warna primary */
+    border-radius: 50px; /* bulat */
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.filter-toggle-btn:hover {
+    background: var(--primary); /* hover jadi primary */
+    color: white; /* font jadi putih */
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3); /* glow sesuai warna primary */
+    transform: translateY(-2px); /* efek naik sedikit */
+}
+
+
+.filter-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    overflow: hidden;
+    width: 100%; /* ⬅️ Penting! */
+}
+
+.job-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+    padding-right: 8px;
+    height: auto;
+    max-height: none;
+    transition: width 0.3s ease; /* Tambahkan ini */
+    padding-top: 16px; /* atau sesuaikan */
+}
+
+.job-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.job-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5);
+    transform: translateY(-2px);
+    z-index: 1; /* ⬅️ Tambahkan ini */
+}
+
+.job-card-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+}
+
+.job-time {
+    font-family: var(--caption-font-family);
+    font-weight: var(--caption-font-weight);
+    font-size: var(--caption-font-size);
+    color: var(--text-2);
+    min-width: 80px;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+}
+
+.job-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.company-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company-name {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+}
+
+.job-title {
+    font-family: var(--h6-font-family);
+    font-weight: var(--h6-font-weight);
+    font-size: var(--h6-font-size);
+    color: var(--text-1);
+}
+
+.job-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.job-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--caption-font-family);
+    font-weight: var(--caption-font-weight);
+    font-size: var(--caption-font-size);
+    color: var(--text-2);
+}
+
+.job-tag svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+}
+
+.job-card-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.job-salary {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+    white-space: nowrap;
+}
+
+.bookmark-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn.active {
+    background: var(--hoverbiru);
+    border-color: var(--primary);
+}
+
+.bookmark-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-2);
+    transition: color 0.3s;
+}
+
+.bookmark-btn:hover svg,
+.bookmark-btn.active svg {
+    color: var(--primary);
+}
+/* === DESKTOP FILTER SIDEBAR (SLIDE-IN) === */
+.filter-sidebar {
+    position: fixed;
+    top: 80px; /* Mulai dari bawah navbar */
+    right: -320px;
+    width: 320px;
+    height: calc(100vh - 160px); /* Kurangi 80px untuk footer */
+    bottom: 0;
+    background: var(--card);
+    padding: 24px 24px 0 24px;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-sidebar.active {
+    right: 0;
+}
+
+.filter-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.filter-sidebar-header h3 {
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    font-size: var(--h4-font-size);
+    color: var(--text-1);
+    margin: 0;
+}
+
+.close-sidebar-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.close-sidebar-btn:hover {
+    background: var(--bg);
+}
+
+.close-sidebar-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-1);
+}
+
+.filter-sidebar-body {
+    padding: 0 0 20px;
+}
+
+.filter-sidebar-footer {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    position: absolute; /* ⬅️ Ganti dari sticky ke absolute */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white; /* ⬅️ Pastikan background putih */
+    z-index: 10; /* ⬅️ Agar tidak tertutup oleh konten */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05); /* Optional: efek lembut saat di atas konten */
+}
+.findjobs-section.sidebar-active {
+    margin-right: 320px;
+    width: calc(100% - 320px);
+    /* Pastikan tidak ada overflow-x */
+    overflow-x: hidden;
+}
+
+/* Agar job list tetap bisa scroll dan tidak terpotong */
+.findjobs-section.sidebar-active .job-list {
+    padding-right: 16px; /* Jarak dari sidebar */
+}
+@media (min-width: 1025px) {
+    .filter-sidebar.active ~ .content-wrapper {
+        /* ❌ JANGAN PAKAI MARGIN-RIGHT DI SINI */
+    }
+
+    /* ✅ GANTI DENGAN: TAMBAHKAN MARGIN-RIGHT PADA .findjobs-section SAAT SIDEBAR AKTIF */
+    .filter-sidebar.active ~ .content-wrapper {
+        /* Biarkan content-wrapper tetap penuh */
+    }
+
+    /* ✅ INI YANG KAMU MAU: KURANGI LEBAR .findjobs-section */
+    .filter-sidebar.active + .findjobs-section {
+        margin-right: 320px;
+    }
+}
+
+/* === MOBILE/TABLET RESPONSIVE === */
+@media (max-width: 1024px) {
+    .search-filter-bar {
+        display: flex;
+    }
+
+    .filter-sidebar {
+        display: none; /* hide desktop sidebar on mobile/tablet */
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .job-list {
+        width: 100%;
+    }
+
+    /* Show filter popup for tablet/mobile */
+    .filter-popup {
+        display: none;
+    }
+
+    .filter-popup.active {
+        display: block;
+    }
+}
+
+@media (min-width: 1025px) {
+    .search-filter-bar {
+        display: flex;
+    }
+
+    .filter-sidebar {
+        display: block;
+    }
+
+    .content-wrapper {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .job-list {
+        flex: 1;
+    }
+
+    /* Hide mobile popup on desktop */
+    .filter-popup {
+        display: none !important;
+    }
+}
+/* Desktop Filter Sidebar */
+.filter-sidebar {
+    width: 320px;
+    height: 670px;
+    background: var(--card);
+    border: none;
+    box-shadow: none;
+    padding: 24px 24px 0px 24px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden; /* ⬅️ HILANGKAN HORIZONTAL SCROLL / NONGOL */
+}
+
+.filter-sidebar h3 {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+    margin-bottom: 16px;
+}
+
+.filter-section {
+    padding: 0; /* ⬅️ Pastikan tidak ada padding */
+    width: 100%; /* ⬅️ Jaga agar tidak melebihi lebar parent */
+    box-sizing: border-box; /* ⬅️ Penting! */
+    box-sizing: border-box;
+    /* Tambahkan margin-bottom HANYA jika TIDAK aktif untuk memisahkan antar section */
+    margin-bottom: 24px; /* Gunakan margin-bottom yang lebih besar sebagai pemisah default */
+
+}
+
+
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+.filter-header {
+    font-weight: 500;
+    margin: 12px 0 8px;
+    color: var(--text-2);
+    font-size: var(--h6-font-size);
+    font-family: var(--h6-font-family);
+    font-weight: var(--h6-font-weight);
+}
+
+.filter-group label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-2);
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--primary);
+}
+
+.salary-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.salary-range input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.salary-range span {
+    color: var(--text-2);
+}
+
+/* Header section dengan tombol toggle */
+.filter-section-header {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0; /* ⬅️ jangan pakai padding-left/right besar */
+    margin-bottom: 8px;
+    width: 100%; /* ⬅️ penting */
+    box-sizing: border-box;
+}
+
+.filter-section-header h3 {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+    margin: 0;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.3s;
+}
+
+.toggle-btn svg {
+    width: 16px;
+    height: 16px;
+    color: var(--text-2);
+}
+
+/* Konten section (default hidden) */
+.filter-section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0px;
+}
+
+/* Modifikasi agar margin-bottom hilang saat section ditutup */
+.filter-section.active {
+    margin-bottom: 0; /* Hilangkan margin saat aktif/terbuka agar padding bawah content yang bekerja */
+}
+
+/* Biarkan last-child seperti ini untuk konsistensi */
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Saat aktif (dibuka) */
+.filter-section.active .filter-section-content {
+    max-height: 500px; 
+    /* TAMBAHKAN KEMBALI padding-bottom DI SINI */
+    padding-bottom: 16px; /* Tambahkan ruang pemisah di sini */
+}
+
+/* Untuk elemen filter di dalamnya, pastikan tidak ada margin-bottom */
+.filter-group label {
+    display: block;
+    margin: 8px 0; /* Jaga ini agar tetap ada margin vertikal kecil */
+    /* ... kode lainnya ... */
+}
+
+.filter-section.active .toggle-btn svg {
+    transform: rotate(180deg);
+}
+
+/* Filter Popup (Mobile & Tablet) */
+.filter-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.filter-popup.active {
+    display: block;
+}
+
+.filter-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.filter-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.filter-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-popup-header h3 {
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    font-size: var(--h4-font-size);
+    color: var(--text-1);
+    margin: 0;
+}
+
+.close-popup-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.close-popup-btn:hover {
+    background: var(--bg);
+}
+
+.close-popup-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-1);
+}
+
+.filter-popup-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.filter-popup-body .filter-section {
+    margin-bottom: 24px;
+}
+
+.filter-popup-body h3 {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+    margin-bottom: 12px;
+}
+
+.filter-popup-body .filter-header {
+    font-weight: 500;
+    margin: 12px 0 8px;
+    color: var(--text-2);
+    font-size: 13px;
+}
+
+.filter-popup-body .filter-group label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-2);
+}
+
+.filter-popup-body .filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--primary);
+}
+
+.filter-popup-footer {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.reset-btn,
+.apply-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.reset-btn {
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text-1);
+}
+
+.reset-btn:hover {
+    background: var(--bg);
+}
+
+.apply-btn {
+    background: var(--primary);
+    border: none;
+    color: white;
+}
+
+.apply-btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .search-filter-bar {
+        display: flex;
+    }
+
+    .filter-sidebar {
+        display: none;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .job-list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .findjobs-section {
+        padding: 100px 20px 60px;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .job-card-left {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .job-time {
+        min-width: auto;
+    }
+
+    .job-card-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .filter-popup-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+}

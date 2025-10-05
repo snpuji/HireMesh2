@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <img class="img" src="img/frame-427319279.svg" />
+      <img class="ellipse" src="img/ellipse-4.svg" />
+      <div class="div"></div>
+      <div class="vector-wrapper"><img class="vector" src="img/vector.svg" /></div>
+      <img class="vector-2" src="img/image.svg" />
+      <div class="img-wrapper"><img class="vector-3" src="img/vector-7.svg" /></div>
+      <img class="vector-4" src="img/vector-2.svg" />
+      <div class="div-2">
+        <div class="div-3">
+          <img class="image" src="img/image-61.png" />
+          <div class="div-4">
+            <div class="text-wrapper">TenTwenty</div>
+            <div class="text-wrapper-2">Marta, HR Manager</div>
+            <p class="p">“We found the right talent in days, not weeks. The process is smooth and fast.”</p>
+          </div>
+        </div>
+        <div class="mynaui-pin-solid"><img class="vector-5" src="img/vector-3.svg" /></div>
+      </div>
+      <div class="group-wrapper">
+        <div class="group">
+          <div class="div-5">
+            <div class="lets-icons-message"></div>
+            <div class="div-6">
+              <p class="hiremesh-helped-me">
+                “HireMesh helped me showcase my work. <br />I landed 2 projects in just a week.”
+              </p>
+              <div class="text-wrapper-3">-Puji, UI/UX Designer</div>
+            </div>
+          </div>
+          <div class="bi-cursor-fill"><img class="vector-6" src="img/vector-4.svg" /></div>
+        </div>
+      </div>
+      <div class="div-wrapper">
+        <div class="group-2">
+          <div class="div-7">
+            <div class="div-6">
+              <p class="text-wrapper-4">
+                “It’s easier to connect with global clients. My profile feels more professional.”
+              </p>
+              <div class="text-wrapper-5">-Jose, Mobile Dev</div>
+            </div>
+            <div class="healthicons-ui-user"></div>
+          </div>
+          <div class="bi-cursor-fill"><img class="vector-6" src="img/vector-5.svg" /></div>
+        </div>
+      </div>
+      <div class="div-8">
+        <div class="turn-your-skills-wrapper">
+          <p class="turn-your-skills">Turn Your Skills <br />Into Opportunities</p>
+        </div>
+        <div class="div-wrapper-2">
+          <p class="text-wrapper-6">
+            HireMesh helps talents access global remote job opportunities and prepare for international careers through
+            diverse skill development programs.
+          </p>
+        </div>
+        <div class="frame-wrapper">
+          <div class="div-9">
+            <button class="CTA"><div class="text-wrapper-7">Find Remote Jobs</div></button>
+            <button class="button"><div class="text-wrapper-8">Find Talent</div></button>
+          </div>
+        </div>
+      </div>
+      <div class="div-10">
+        <div class="div-11">
+          <img class="image" src="img/image-25.png" />
+          <div class="div-4">
+            <div class="text-wrapper">CleverTop</div>
+            <div class="text-wrapper-2">James, Founder</div>
+            <p class="text-wrapper-9">
+              “HireMesh gives us access to skilled people worldwide without the usual hassle.”
+            </p>
+          </div>
+        </div>
+        <div class="mynaui-pin-solid-2"><img class="vector-5" src="img/vector-6.svg" /></div>
+      </div>
+    </div>
+  </body>
+</html>
