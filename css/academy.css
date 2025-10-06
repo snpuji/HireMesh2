@@ -1,0 +1,114 @@
+
+/* Styling Umum */
+body {
+    font-family: var(--body-font-family);
+    background-color: var(--bg);
+}
+
+.company-section {
+    /* Set max-width tinggi untuk laptop */
+    max-width: 2000px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: var(--h2-font-weight);
+    color: var(--text-1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.caption-title {
+    font-size: 1.5rem;
+    font-weight: var(--h6-font-weight);
+    font-size: var(--body-font-family);
+    color: var(--text-2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Container untuk Card menggunakan CSS Grid */
+.card-container {
+    display: grid;
+    gap: 20px; 
+    padding: 10px 0;
+}
+
+/* Styling Card */
+.company-card {
+    background-color: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Box shadow awal yang lembut */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    /* Tambahkan border transparan agar tidak ada "lompatan" saat hover */
+    border: 2px solid transparent; 
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek HOVER: Border Primary dan Menyala */
+.company-card:hover {
+    transform: translateY(-5px); /* Efek pergeseran ke atas */
+    /* Mengganti border menjadi warna primary */
+    border-color: var(--primary); 
+    /* Efek menyala (glow) menggunakan box-shadow */
+    
+    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5);
+}
+
+/* Placeholder Logo untuk Gambar */
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px; 
+    margin-bottom: 15px;
+    
+    /* Menggunakan gambar dari path yang diminta */
+    background-image: url('/HireMesh2/Images/gm1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 600; 
+    color: var(--text-1);
+    margin: 5px 0 3px 0;
+}
+
+.job-count {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    font-weight: 500;
+}
+
+/* ------------------------------------------- */
+/* MEDIA QUERIES UNTUK RESPONSIVITAS */
+/* ------------------------------------------- */
+
+/* 1. HP (Mobile): Maksimal 2 kolom */
+@media (max-width: 767px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP */
+    }
+}
+
+/* 2. Setengah Laptop/Tablet (Medium Screen): 3 kolom */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom di layar menengah */
+    }
+}
+
+/* 3. Laptop (Large Screen): 6 kolom */
+@media (min-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(6, 1fr); /* 6 kolom di layar lebar */
+    }
+}
