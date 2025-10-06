@@ -50,7 +50,9 @@
                     </svg>
                 </button>
 
-                <img src="/HireMesh2/Images/puji.png" alt="Profile" class="profile-img" title="Profile">
+                <a href="utama.php?page=profile">
+                    <img src="/HireMesh2/Images/puji.png" alt="Profile" class="profile-img" title="Profile">
+                </a>
             </div>
         </div>
     </nav>
@@ -88,6 +90,8 @@ document.addEventListener("click", (e) => {
                 include "home.php";
             } elseif ($_GET['page'] == 'findjob') {
                 include "findjob.php";
+            } elseif ($_GET['page'] == 'profile') {
+                include "profile.php";
             } else {
                 echo "<p>Page not found.</p>";
             }
