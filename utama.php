@@ -92,6 +92,8 @@ document.addEventListener("click", (e) => {
                 include "findjob.php";
             } elseif ($_GET['page'] == 'profile') {
                 include "profile.php";
+            } elseif ($_GET['page'] == 'editprofile') {
+                include "editprofile.php";
             } else {
                 echo "<p>Page not found.</p>";
             }

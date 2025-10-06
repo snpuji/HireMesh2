@@ -30,7 +30,9 @@
                     </div>
                     <h1 class="user-name">Pjay</h1>
                     
-                    <button class="btn btn-primary"><i class="fas fa-edit"></i> Edit Profile</button>
+                    <a href="utama.php?page=editprofile" class="btn btn-primary">
+                    <i class="fas fa-edit"></i> Edit Profile
+                    </a>
                     <button class="btn btn-secondary">View Profile</button>
                     
 

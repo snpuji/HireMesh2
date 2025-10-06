@@ -1,0 +1,366 @@
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--body-font-family);
+      background: var(--bg);
+      color: var(--text-1);
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding-top: 120px
+    }
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        }
+    /* CARD 1 - Progress Section */
+    .progress-card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      padding: 24px 30px;
+      margin-bottom: 20px;
+      width: 100%;
+    box-sizing: border-box;
+    }
+
+    .progress-bar-container {
+      height: 6px;
+      background: #E5E7EB;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      width: 50%;
+      background: linear-gradient(90deg, #0066FF 0%, #0052CC 100%);
+      border-radius: 3px;
+    }
+
+    .progress-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .progress-info {
+      flex: 1;
+    }
+
+    .info-text {
+      color: var(--text-2);
+      font-size: 13px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-text i {
+      color: var(--text-2);
+      font-size: 16px;
+    }
+
+    .progress-info h4 {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: var(--text-1);
+    }
+
+    .progress-info p {
+      color: var(--text-2);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .nav-btns {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btns button {
+      border: none;
+      background: transparent;
+      color: var(--primary);
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btns button:hover {
+      background: var(--hoverbiru);
+    }
+
+    .nav-btns .btn-prev {
+      color: var(--text-2);
+    }
+
+    .progress-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .progress-status {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+
+    .btn-outline, .btn-primary {
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--hoverbiru);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0052CC;
+    }
+
+    /* CARD 2 + 3 Layout */
+    .profile-container {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    /* CARD 2 - Sidebar */
+    .sidebar {
+  flex-shrink: 0;
+  width: 280px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 100px;
+}
+
+    .sidebar .nav-item {
+      display: block;
+      padding: 12px 24px;
+      color: var(--text-1);
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 14px;
+      border-left: 3px solid transparent;
+    }
+
+    .sidebar .nav-item:hover {
+      background: var(--hoverbiru);
+      color: var(--primary);
+    }
+
+    .sidebar .nav-item.active {
+      background: var(--hoverbiru);
+      color: var(--primary);
+      font-weight: 600;
+      border-left-color: var(--primary);
+    }
+
+    /* CARD 3 - Form */
+    .form-card {
+      flex: 1;
+      background: var(--card);
+      border-radius: 12px;
+      padding: 30px 35px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .upload-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 35px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border: 3px solid var(--border);
+    }
+
+    .btn-upload {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+      border-radius: 8px;
+      padding: 10px 18px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-upload:hover {
+      background: var(--hoverbiru);
+    }
+
+    .form-section {
+      margin-bottom: 35px;
+      scroll-margin-top: 20px;
+    }
+
+    .form-section h3 {
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--text-1);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .profile-form label {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-1);
+    }
+
+    .profile-form input,
+    .profile-form textarea,
+    .profile-form select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s;
+      background: var(--card);
+    }
+
+    .profile-form input:focus,
+    .profile-form textarea:focus,
+    .profile-form select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    }
+
+    .profile-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .flex-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .checkbox input[type="checkbox"] {
+      width: auto;
+      cursor: pointer;
+    }
+
+    .checkbox label {
+      margin: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .social-field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .social-field i {
+      font-size: 20px;
+      color: var(--primary);
+      width: 24px;
+      text-align: center;
+    }
+
+    .social-field input {
+      flex: 1;
+      margin-top: 0;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .profile-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        position: static;
+      }
+
+      .progress-content {
+        flex-direction: column;
+      }
+
+      .flex-row {
+        grid-template-columns: 1fr;
+      }
+    }
