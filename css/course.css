@@ -285,3 +285,242 @@
                 justify-content: center;
             }
         }
+
+  
+        /* ================== Modern Modal Styles (Revisi) ================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.45);
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    max-width: 600px;
+    overflow: hidden;
+    animation: fadeInScale 0.35s ease-out;
+    transform-origin: center;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* close button */
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: #2c3e50;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s ease;
+    z-index: 10; /* Pastikan tombol di atas gambar */
+}
+.close-btn:hover {
+    background: #e6eef9;
+    transform: rotate(90deg);
+}
+
+/* gambar header modal */
+.modal-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* isi modal */
+.modal-body {
+    padding: 28px;
+}
+
+.modal-body h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+/* Metadata (Date & Price) */
+.modal-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+    flex-wrap: wrap;
+}
+.modal-meta .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+.modal-meta .price-details {
+    color: #16a34a;
+    font-weight: 600;
+}
+.price-original {
+    text-decoration: line-through;
+    color: #b91c1c;
+    font-size: 0.85rem;
+    margin-left: 8px;
+}
+
+/* voucher steps */
+.voucher-section h3 {
+    font-size: 1.1rem;
+    color: #111827;
+    margin-bottom: 14px;
+}
+.voucher-section li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+.voucher-section ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+.voucher-section ul li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 15px;
+}
+.voucher-section ul li::before {
+    content: "•";
+    color: #3b82f6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+/* Styling untuk bold teks tutorial (menggantikan **) */
+.voucher-section .bold-text {
+    font-weight: 600;
+    color: #111827; /* Lebih gelap agar lebih menonjol */
+}
+.voucher-section .important-text {
+    font-weight: 700;
+    color: #ef4444; /* Warna merah untuk "Important" */
+}
+
+/* Tombol Aksi */
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.voucher-code-wrapper {
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 10px;
+    flex: 1 1 55%; /* Berikan lebih banyak ruang untuk kode */
+    overflow: hidden;
+}
+
+#modalVoucherCode {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-weight: 700; /* Lebih bold untuk kode */
+    color: #111827;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Tombol Copy Code (Hanya Ikon) */
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    /* Warna Primary */
+    background: #3b82f6; 
+    color: #fff;
+    border: none;
+    padding: 12px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.25s;
+    width: auto; /* Agar lebarnya mengikuti konten */
+}
+.copy-btn:hover {
+    background: #2563eb;
+}
+.copy-btn svg {
+    stroke: #fff;
+    width: 18px; /* Ikon sedikit lebih besar */
+    height: 18px;
+}
+.copy-btn .copy-feedback {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Tombol Claim Now (Warna Primary) */
+.claim-btn {
+    flex: 1 1 35%; /* Berikan ruang yang proporsional */
+    text-align: center;
+    /* Warna Primary */
+    background: #3b82f6; 
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+}
+.claim-btn:hover {
+    /* Hover effect */
+    background: #2563eb; 
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    /* ... (kode media query sebelumnya) ... */
+    .modal-actions {
+        flex-direction: column;
+    }
+    /* Agar kedua tombol memenuhi lebar penuh di mobile */
+    .voucher-code-wrapper,
+    .claim-btn {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
