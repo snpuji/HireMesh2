@@ -133,6 +133,8 @@ document.addEventListener("click", (e) => {
                 include "companyprofile.php";
             } elseif ($_GET['page'] == 'hiremesh') {
                 include "hiremesh.php";
+            } elseif ($_GET['page'] == 'jobdetail') {
+                include "jobdetail.php";
             } else {
                 echo "<p>Page not found.</p>";
             }

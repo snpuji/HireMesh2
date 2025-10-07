@@ -1,3 +1,8 @@
+.job-card-link {
+  text-decoration: none; /* hilangkan underline */
+  color: inherit;        /* gunakan warna teks default */
+  display: block;        /* supaya seluruh card bisa diklik */
+}
 
 /* Find Jobs Section — Ketika sidebar aktif, geser ke kiri */
 .findjobs-section {

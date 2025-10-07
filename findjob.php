@@ -25,40 +25,42 @@
         Filter
     </button>
 </div>
-
 <div class="content-wrapper">
   <div class="job-list">
 
-    <div class="job-card">
-      <div class="job-details">
-        <p class="time-ago">5 hours ago</p>
-        <div class="company-logo-info">
-          <div class="logo-box" style="background-color: #4B0082;"></div>
-          <div>
-            <h3 class="job-company-title">TenTwenty</h3>
-            <p class="job-role">UI/UX Designer</p>
+    <a href="utama.php?page=jobdetail" class="job-card-link">
+      <div class="job-card">
+        <div class="job-details">
+          <p class="time-ago">5 hours ago</p>
+          <div class="company-logo-info">
+            <div class="logo-box" style="background-color: #4B0082;"></div>
+            <div>
+              <h3 class="job-company-title">TenTwenty</h3>
+              <p class="job-role">UI/UX Designer</p>
+            </div>
           </div>
         </div>
-     </div>
-      <div class="job-meta">
-  <div class="job-info">
-    <p class="salary-range">$50k-$80k</p>
-    <div class="job-tags">
-      <span class="tag">Apply via External Website</span>
-      <span class="tag">Remote</span>
-      <span class="tag">Asian Only</span>
-      <span class="tag">Internship</span>
-    </div>
-  </div>
+        <div class="job-meta">
+          <div class="job-info">
+            <p class="salary-range">$50k-$80k</p>
+            <div class="job-tags">
+              <span class="tag">Apply via External Website</span>
+              <span class="tag">Remote</span>
+              <span class="tag">Asian Only</span>
+              <span class="tag">Internship</span>
+            </div>
+          </div>
 
-  <button class="bookmark-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-    </svg>
-  </button>
-</div>
-    </div>
+          <button class="bookmark-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </a>
+
 
     <div class="job-card">
       <div class="job-details">

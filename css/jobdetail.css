@@ -1,0 +1,379 @@
+/* Style Guide Variables (As provided in the prompt) */
+/* ... (Code for :root variables) ... */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family);
+    background-color: var(--bg);
+    color: var(--text-1);
+    /* Hapus padding dari body */
+}
+
+/* === MAIN CONTENT WRAPPER === */
+.main-content-wrapper {
+    /* Pindahkan padding dan centering ke wrapper ini */
+    padding: 40px 80px; 
+    padding-top: 120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Layout Container */
+.job-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left Content */
+.job-content {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.job-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.job-header-left h3 {
+    font-family: var(--caption-font-family);
+    font-weight: var(--caption-font-weight);
+    font-size: var(--caption-font-size);
+    color: var(--text-2);
+    margin-bottom: 12px;
+}
+
+.job-title {
+    font-family: var(--h2-font-family);
+    font-weight: var(--h2-font-weight);
+    font-size: var(--h2-font-size);
+    color: var(--text-1);
+    margin-bottom: 24px;
+}
+
+/* Social Actions */
+.job-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-btn,
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text-1);
+    font-size: var(--caption-font-size);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-btn:hover,
+.copy-btn:hover {
+    background: var(--hoverbiru);
+    border-color: var(--primary);
+}
+
+.social-btn svg,
+.copy-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-btn.facebook {
+    color: #1877F2;
+}
+
+.social-btn.instagram {
+    color: #E4405F;
+}
+
+/* Bookmark Button */
+.bookmark-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn.active {
+    background: var(--hoverbiru);
+    border-color: var(--primary);
+}
+
+.bookmark-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-2);
+    transition: color 0.3s;
+}
+
+.bookmark-btn:hover svg,
+.bookmark-btn.active svg {
+    color: var(--primary);
+}
+
+/* Job Description Sections */
+.job-section {
+    margin-bottom: 40px;
+}
+
+.job-section h2 {
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    font-size: var(--h4-font-size);
+    color: var(--text-1);
+    margin-bottom: 16px;
+}
+
+.job-section p {
+    font-size: var(--body-font-size);
+    line-height: 1.7;
+    color: var(--text-2);
+    margin-bottom: 16px;
+}
+
+.job-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-section ul li {
+    font-size: var(--body-font-size);
+    line-height: 1.7;
+    color: var(--text-2);
+    padding-left: 24px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.job-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: var(--text-2);
+}
+
+.job-section a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Apply Button (Bottom) */
+.apply-btn-bottom {
+    width: fit-content;
+    padding: 14px 32px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--body-font-size);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.apply-btn-bottom:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Right Sidebar */
+.job-sidebar {
+    position: sticky;
+    top: 40px;
+    height: fit-content;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--card);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: var(--body-font-size);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 0px;
+    margin-bottom: 24px;
+}
+
+.back-btn:hover {
+    background: var(--hoverbiru);
+}
+
+.back-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.company-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.company-logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4318FF 0%, #6B3FFF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.company-name {
+    font-family: var(--h4-font-family);
+    font-weight: var(--h4-font-weight);
+    font-size: var(--h4-font-size);
+    color: var(--text-1);
+    margin-bottom: 8px;
+}
+
+.company-subtitle {
+    font-size: var(--caption-font-size);
+    color: var(--text-2);
+    margin-bottom: 24px;
+}
+
+.apply-btn-primary {
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--body-font-size);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 12px;
+}
+
+.apply-btn-primary:hover {
+    opacity: 0.9;
+}
+
+.view-company-btn {
+    width: 100%;
+    padding: 14px 24px;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-size: var(--body-font-size);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 24px;
+}
+
+.view-company-btn:hover {
+    background: var(--hoverbiru);
+}
+
+/* Job Info List */
+.job-info-list {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-label {
+    font-family: var(--h6-font-family);
+    font-weight: var(--h6-font-weight);
+    font-size: var(--h6-font-size);
+    color: var(--text-1);
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: var(--body-font-size);
+    color: var(--text-2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .main-content-wrapper {
+        padding: 30px 40px;
+        padding-top: 120px;
+    }
+
+    .job-detail-container {
+        grid-template-columns: 1fr;
+    }
+
+    .job-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .back-btn {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        padding: 20px;
+        padding-top: 120px;
+    }
+
+    .job-content {
+        padding: 24px;
+    }
+
+    .job-title {
+        font-size: 28px;
+    }
+
+    .job-actions {
+        flex-wrap: wrap;
+    }
+
+    .company-card {
+        padding: 24px;
+    }
+}
