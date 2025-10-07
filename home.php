@@ -1,4 +1,5 @@
-
+<!-- Find Jobs Page -->
+<link rel="stylesheet" href="css/findjob.css" />
     
     <!-- Main Content -->
     <div class="frame">
@@ -47,7 +48,7 @@
                 <div class="bubble-avatar"></div>
                 <div class="bubble-text-wrapper">
                     <div class="bubble-text">"It's easier to connect with global clients. My profile feels more professional."</div>
-                    <div class="bubble-name">-Jose, Mobile Dev</div>
+                    <div class="bubble-name">-Rizki, Mobile Dev</div>
                 </div>
             </div>
         </div>
@@ -85,64 +86,40 @@
             </button>
         </div>
 
-        <div class="job-list">
-            <!-- Job Card 1 -->
-            <div class="job-card">
-                <div class="job-card-left">
-                    <div class="job-time">5 hour ago</div>
-                    <div class="company-logo" style=" 
-                        background-image: url('/Hiremesh2/Images/gt.png');
-                        background-size: cover;
-                        background-position: center;
-                        width: 80px; /* sesuaikan ukuran */
-                        height: 80px; /* sesuaikan ukuran */
-                    ">
-                        <span style="font-size: 24px;"></span>
-                    </div>
-                    <div class="job-info">
-                        <div class="company-name-wrapper">
-                            <span class="company-name">TenTwenty</span>
-                            
-                        </div>
-                        <div class="job-title">UI/UX Designer</div>
-                        <div class="job-tags">
-                            <span class="job-tag">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                                Easy apply
-                            </span>
-                            <span class="job-tag">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <circle cx="12" cy="12" r="10"/>
-                                </svg>
-                                Remote
-                            </span>
-                            <span class="job-tag">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                                </svg>
-                                Indonesian Only
-                            </span>
-                            <span class="job-tag">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <circle cx="12" cy="12" r="10"/>
-                                </svg>
-                                Internship
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-card-right">
-                    <div class="job-salary">$50k-$80k</div>
-                    <button class="bookmark-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    </button>
-                </div>
-            </div>
-            <script>
+        <div class="content-wrapper">
+  <div class="job-list">
+
+    <div class="job-card">
+      <div class="job-details">
+        <p class="time-ago">5 hours ago</p>
+        <div class="company-logo-info">
+          <div class="logo-box" style="background-color: #4B0082;"></div>
+          <div>
+            <h3 class="job-company-title">TenTwenty</h3>
+            <p class="job-role">UI/UX Designer</p>
+          </div>
+        </div>
+        </div>
+      <div class="job-meta">
+  <div class="job-info">
+    <p class="salary-range">$50k-$80k</p>
+    <div class="job-tags">
+      <span class="tag">Apply via External Website</span>
+      <span class="tag">Remote</span>
+      <span class="tag">Asian Only</span>
+      <span class="tag">Internship</span>
+    </div>
+  </div>
+
+  <button class="bookmark-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
+</div>
+    </div>
+    <script>
                 document.querySelectorAll('.bookmark-btn').forEach(btn => {
                     btn.addEventListener('click', () => {
                     btn.classList.toggle('active');

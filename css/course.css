@@ -1,0 +1,287 @@
+
+        /* === GLOBAL RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BODY hanya untuk font dan background halaman */
+        body {
+            font-family: var(--body-font-family);
+            background-color: var(--bg);
+            color: var(--text-1);
+            min-height: 100vh; /* Pastikan body setidaknya setinggi viewport */
+        }
+        
+        /* === WRAPPER UTAMA (MENGGANTIKAN PADDING DI BODY) === */
+        .academy-page-wrapper {
+            padding-top: 120px; /* Padding yang tadinya di body */
+            padding-bottom: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        /* === HEADER SECTION === */
+        .academy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            color: var(--primary);
+            font-size: var(--body-font-size);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: var(--hoverbiru);
+            border-color: var(--primary);
+        }
+
+        .back-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* === PROFILE SECTION === */
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .academy-logo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1ba098 0%, #0d7d76 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .academy-name {
+            font-family: var(--h2-font-family);
+            font-weight: var(--h2-font-weight);
+            font-size: var(--h2-font-size);
+            color: var(--text-1);
+            margin-bottom: 16px;
+        }
+
+        .profile-meta {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-2);
+            font-size: var(--body-font-size);
+        }
+
+        .meta-item svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .meta-item a {
+            color: var(--text-2);
+            text-decoration: none;
+        }
+
+        .meta-item a:hover {
+            color: var(--primary);
+        }
+
+        .about-section {
+            /* Pastikan ada class untuk bagian ABOUT US */
+        }
+        
+        .section-title {
+            font-family: var(--h4-font-family);
+            font-weight: var(--h4-font-weight);
+            font-size: var(--h4-font-size);
+            color: var(--text-1);
+            margin-bottom: 16px;
+        }
+
+        .about-text {
+            font-size: var(--body-font-size);
+            line-height: 1.7;
+            color: var(--text-2);
+        }
+
+        /* === COURSES SECTION === */
+        .courses-section {
+            margin-top: 50px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .course-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            /* style background */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .course-content {
+            padding: 20px;
+        }
+
+        .course-title {
+            font-family: var(--h6-font-family);
+            font-weight: var(--h6-font-weight);
+            font-size: var(--h6-font-size);
+            color: var(--text-1);
+            margin-bottom: 16px;
+            line-height: 1.4;
+            min-height: 50px;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .course-date,
+        .course-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: var(--caption-font-size);
+        }
+
+        .course-date {
+            color: var(--primary);
+        }
+
+        .course-date svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .course-price {
+            color: var(--text-1);
+            font-weight: 600;
+        }
+
+        .course-price svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: var(--text-2);
+            font-weight: 400;
+            margin-left: 8px;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1200px) {
+            .courses-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .academy-page-wrapper {
+                padding: 30px 40px; /* Penyesuaian padding */
+            }
+
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-info {
+                max-width: 600px; /* Batasi lebar teks agar tidak terlalu lebar di tablet */
+            }
+
+            .profile-meta {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .academy-page-wrapper {
+                padding: 20px; /* Penyesuaian padding untuk HP */
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .academy-logo {
+                width: 120px;
+                height: 120px;
+                font-size: 36px;
+            }
+            
+            .academy-name {
+                font-size: var(--h3-font-size);
+            }
+            
+            .profile-meta {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+            
+            .meta-item {
+                justify-content: center;
+            }
+        }

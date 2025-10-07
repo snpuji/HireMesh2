@@ -180,7 +180,7 @@
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h3 class="modal-title">Class Access Information</h3>
-        <p><span id="className"></span>Your access to the Basic UI/UX Design class is now ready!!</p>
+        <p><span id="className"></span> Your access to the Basic UI/UX Design class is now ready!!</p>
         <div class="modal-info-group">
             <p><strong>Link Zoom:</strong> <a href="#" id="zoomLink" target="_blank">Click here to join</a></p>
             <p><strong>Grup WhatsApp:</strong> <a href="#" id="waLink" target="_blank">Join the WA Group</a></p>
@@ -208,7 +208,7 @@
         const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
         const modal = document.getElementById('classModal');
         const closeBtn = document.querySelector('.close-btn');
-        const accessBtns = document.querySelectorAll('.btn-access-class');
+        const accessBtns = document.querySelectorAll('.modal-action-btn');
 
         // === 1. LOGIC TAB SWITCHING ===
         tabItems.forEach(item => {

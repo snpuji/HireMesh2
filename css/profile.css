@@ -337,13 +337,12 @@ body {
 }
 
 .tag {
-    font-size: 11px; /* Lebih kecil dari caption */
-    font-weight: 500;
+    background: var(--sidebar);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif; /* ini buat font Poppins */
     color: var(--text-2);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 3px 6px;
-    white-space: nowrap;
 }
 
 

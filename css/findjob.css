@@ -1,3 +1,4 @@
+
 /* Find Jobs Section — Ketika sidebar aktif, geser ke kiri */
 .findjobs-section {
     background-color: var(--bg);
@@ -108,23 +109,129 @@
 }
 
 .job-card {
-    background: white;
+    background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center;       /* vertikal center */
+    justify-content: center;   /* horizontal center */
     transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+
+.job-card:hover {
+    border-color: var(--primary); 
+    box-shadow: 0 0 12px rgba(0, 122, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.job-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.time-ago {
+    font-size: var(--caption-font-size);
+    font-family: var(--caption-font-family);
+    font-weight: var(--caption-font-weight);
+    color: var(--text-2);
+    margin-bottom: 10px;
+}
+
+.company-logo-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.job-company-title {
+    font-family: var(--h5-font-family);
+    font-weight: var(--h5-font-weight);
+    font-size: var(--h5-font-size);
+    color: var(--text-1);
+}
+
+.job-role {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    color: var(--text-1);
+    margin: 3px 0 0 0;
+}
+
+.match-score {
+    font-size: var(--caption-font-size);
+    color: var(--aktif);
+    font-weight: 500;
+}
+
+
+.bookmark-btn:hover svg {
+    stroke: var(--primary);
+}
+
+.salary-range {
+    font-size: var(--h6-font-size);
+    font-weight: var(--h6-font-weight);
+    font-family: var(--h6-font-family);
+    color: var(--text-1);
+}
+.job-meta {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    gap: 15px;
+}
+
+
+/* salary + job-tags container */
+.job-info {
+    display: flex;
+    flex-direction: column; /* atas-bawah */
+    gap: 5px;
+}
+
+/* job-tags horizontal */
+.job-tags {
+    display: flex;
+    flex-direction: row; /* horizontal */
+    gap: 8px; /* jarak antar tag */
+}
+
+/* tombol bookmark */
+.bookmark-btn {
+    background: none;
+    border: none;
+    padding: 8px;
     cursor: pointer;
 }
 
-.job-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 0 12px rgba(52, 152, 219, 0.5);
-    transform: translateY(-2px);
-    z-index: 1; /* ⬅️ Tambahkan ini */
+.bookmark-btn svg {
+    width: 24px;
+    height: 24px;
 }
+
+.tag {
+    background: var(--sidebar);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif; /* ini buat font Poppins */
+    color: var(--text-2);
+}
+
 
 .job-card-left {
     display: flex;
@@ -151,13 +258,6 @@
     justify-content: center;
     font-weight: 600;
     color: white;
-}
-
-.job-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .company-name-wrapper {
@@ -459,13 +559,14 @@
     margin-right: 8px;
     accent-color: var(--primary);
 }
-
 .salary-range {
     display: flex;
     align-items: center;
+    justify-content: flex-end; /* ini buat rata kanan */
     gap: 8px;
     margin-top: 12px;
 }
+
 
 .salary-range input {
     flex: 1;

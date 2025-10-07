@@ -162,6 +162,7 @@
       display: flex;
       gap: 20px;
       align-items: flex-start;
+      padding-bottom: 20px;
     }
 
     /* CARD 2 - Sidebar */
@@ -364,3 +365,37 @@
         grid-template-columns: 1fr;
       }
     }
+    .ai-hint {
+    color: red; /* warna merah */
+    font-size: var(--caption-font-size); /* ukuran font */
+    font-family: 'Poppins', sans-serif; /* font Poppins */
+  }
+  
+  .btn-add {
+    margin-top: 10px;
+    background-color: transparent;
+    color: var(--primary, #0066ff);
+    border: 1px dashed var(--primary, #0066ff);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-add i {
+    font-size: 13px;
+  }
+
+  .btn-add:hover {
+    background-color: var(--primary, #0066ff);
+    color: white;
+    border-style: solid;
+    box-shadow: 0 4px 10px rgba(0, 102, 255, 0.2);
+    transform: translateY(-1px);
+  }

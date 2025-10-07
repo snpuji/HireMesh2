@@ -168,7 +168,7 @@
                 <div class="bubble-avatar"></div>
                 <div class="bubble-text-wrapper">
                     <div class="bubble-text">"It's easier to connect with global clients. My profile feels more professional."</div>
-                    <div class="bubble-name">-Jose, Mobile Dev</div>
+                    <div class="bubble-name">-Rizki, Mobile Dev</div>
                 </div>
             </div>
         </div>

@@ -37,18 +37,49 @@
             </div>
 
             <div class="icon-group">
-                <button class="icon-btn message" title="Messages">
+                <a href="utama.php?page=message" class="icon-btn message" title="Messages">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                     </svg>
-                </button>
+                </a>
 
-                <button class="icon-btn notification" title="Notifications">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                    </svg>
-                </button>
+                <!-- Tombol Notifikasi -->
+<button class="icon-btn notification" title="Notifications" id="notifBtn">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+  </svg>
+</button>
+
+<!-- Popup Notification -->
+<div class="notif-popup" id="notifPopup">
+  <h4>Your Notification</h4>
+  <div class="notif-empty">
+    <i class="fa-regular fa-bell-slash"></i>
+    <p>You don’t have any notification</p>
+  </div>
+</div>
+
+
+
+<!-- Script -->
+<script>
+  const notifBtn = document.getElementById('notifBtn');
+  const notifPopup = document.getElementById('notifPopup');
+
+  notifBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    notifPopup.classList.toggle('active');
+  });
+
+  // Klik di luar -> tutup popup
+  document.addEventListener('click', (e) => {
+    if (!notifPopup.contains(e.target) && !notifBtn.contains(e.target)) {
+      notifPopup.classList.remove('active');
+    }
+  });
+</script>
+
 
                 <a href="utama.php?page=profile">
                     <img src="/HireMesh2/Images/puji.png" alt="Profile" class="profile-img" title="Profile">
@@ -94,6 +125,14 @@ document.addEventListener("click", (e) => {
                 include "profile.php";
             } elseif ($_GET['page'] == 'editprofile') {
                 include "editprofile.php";
+            } elseif ($_GET['page'] == 'message') {
+                include "message.php";
+            } elseif ($_GET['page'] == 'course') {
+                include "course.php";
+            } elseif ($_GET['page'] == 'companyprofile') {
+                include "companyprofile.php";
+            } elseif ($_GET['page'] == 'hiremesh') {
+                include "hiremesh.php";
             } else {
                 echo "<p>Page not found.</p>";
             }
