@@ -2,58 +2,6 @@
     <div class="container">
             <!-- Scrollable Content -->
             <div class="content-area">
-                <!-- Stats Cards -->
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="7" width="20" height="14" rx="2"/>
-                                <path d="M16 3v4M8 3v4"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <h3>Total Jobs</h3>
-                            <p>5 Jobs</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <h3>Total Companies</h3>
-                            <p>5 Jobs</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <h3>Apply Clicks</h3>
-                            <p>5 Jobs</p>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                        </div>
-                        <div class="stat-info">
-                            <h3>Revenue</h3>
-                            <p>5 Jobs</p>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Recent Apply Clicks Table -->
                 <div class="table-card">
@@ -66,7 +14,6 @@
                                 </svg>
                                 <input type="text" placeholder="Search">
                             </div>
-                            <a href="utama.php?page=seeall" class="see-all">See All</a>
                         </div>
                     </div>
 

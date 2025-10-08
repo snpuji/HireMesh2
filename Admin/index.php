@@ -202,12 +202,6 @@
 </head>
 <body>
     <div class="container">
-        <button class="back-button" onclick="history.back()">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Previous
-        </button>
 
         <div class="icon-wrapper">
             <img src="/HireMesh2/Images/logo.png" alt="Logo HireMesh" class="logo">
@@ -246,7 +240,6 @@
 
             <button type="submit" class="login-button">Log in</button>
 
-            <p class="signin-text">Don't have an account? <a href="Signup.php" class="signin-link">Sign Up</a></p>
         </form>
     </div>
 
