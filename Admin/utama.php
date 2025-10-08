@@ -153,6 +153,12 @@
             <!-- Top Navbar - Fixed -->
 <div class="top-navbar">
   <!-- Tombol Notifikasi -->
+   <div class="search-box">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    <input type="text" placeholder="Search" />
+                </div>
   <button class="icon-btn notification" title="Notifications" id="notifBtn">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
@@ -209,8 +215,8 @@
                 include "dashboard.php";
             } elseif ($_GET['page'] == 'seeall') {
                 include "seeall.php";
-            } elseif ($_GET['page'] == 'home') {
-                include "home.php";
+            } elseif ($_GET['page'] == 'jobs') {
+                include "jobs.php";
             } elseif ($_GET['page'] == 'findjob') {
                 include "findjob.php";
             } elseif ($_GET['page'] == 'profile') {
