@@ -7,6 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/findjob.css" />
 </head>
+<style>
+        .apply-btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      background: #0056b3;
+    }
+
+</style>
 <body>
     <div class="container1">
         <!-- Konten Utama Jobs Page -->
@@ -26,15 +44,13 @@
                     </div>
                 </div>
                 <a href="utama.php?page=addjob" class="add-new-job-btn">+ Add New Job</a>
-
             </div>
 
             <div class="job-list">
-                <a href="utama.php?page=jobdetail" class="job-card-link">
+                <a class="job-card-link">
                     <div class="job-card">
-                        <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                       <div class="job-actions">
+                        <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
                         </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
@@ -63,11 +79,10 @@
                     </div>
                 </a>
 
-                <a href="utama.php?page=jobdetail" class="job-card-link">
+                <a class="job-card-link">
                     <div class="job-card">
                         <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
                         </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
@@ -96,137 +111,133 @@
                     </div>
                 </a>
 
-                <a href="utama.php?page=jobdetail" class="job-card-link">
-                    <div class="job-card">
-                        <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
-                        </div>
-                        <label class="job-select">
-                            <input type="checkbox" class="job-checkbox" data-job-id="1">
-                        </label>
-                        <div class="job-details">
-                            <p class="time-ago">5 hours ago</p>
-                            <div class="company-logo-info">
-                                <div class="logo-box" style="background-color: #E63946;"></div>
-                                <div>
-                                    <h3 class="job-company-title">Gao Tek Inc.</h3>
-                                    <p class="job-role">Graphic Designer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-info">
-                                <p class="salary-range">$50k-$80k</p>
-                                <div class="job-tags">
-                                    <span class="tag">Apply via External Website</span>
-                                    <span class="tag">Remote</span>
-                                    <span class="tag">Asian Only</span>
-                                    <span class="tag">Internship</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <a class="job-card-link">
+    <div class="job-card">
+        <div class="job-actions">
+            <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
+        </div>
+        <label class="job-select">
+            <input type="checkbox" class="job-checkbox" data-job-id="1">
+        </label>
+        <div class="job-details">
+            <p class="time-ago">5 hours ago</p>
+            <div class="company-logo-info">
+                <div class="logo-box" style="background-color: #E63946;"></div>
+                <div>
+                    <h3 class="job-company-title">Gao Tek Inc.</h3>
+                    <p class="job-role">Graphic Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="job-meta">
+            <div class="job-info">
+                <p class="salary-range">$50k-$80k</p>
+                <div class="job-tags">
+                    <span class="tag">Apply via External Website</span>
+                    <span class="tag">Remote</span>
+                    <span class="tag">Asian Only</span>
+                    <span class="tag">Internship</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
 
-                <a href="utama.php?page=jobdetail" class="job-card-link">
-                    <div class="job-card">
-                        <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
-                        </div>
-                        <label class="job-select">
-                            <input type="checkbox" class="job-checkbox" data-job-id="1">
-                        </label>
-                        <div class="job-details">
-                            <p class="time-ago">5 hours ago</p>
-                            <div class="company-logo-info">
-                                <div class="logo-box" style="background-color: #FF5733;"></div>
-                                <div>
-                                    <h3 class="job-company-title">CleverTap</h3>
-                                    <p class="job-role">UI/UX Designer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-info">
-                                <p class="salary-range">$50k-$80k</p>
-                                <div class="job-tags">
-                                    <span class="tag">Apply via Company Website</span>
-                                    <span class="tag">Remote</span>
-                                    <span class="tag">Indonesian Only</span>
-                                    <span class="tag">Internship</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<a class="job-card-link">
+    <div class="job-card">
+        <div class="job-actions">
+            <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
+        </div>
+        <label class="job-select">
+            <input type="checkbox" class="job-checkbox" data-job-id="1">
+        </label>
+        <div class="job-details">
+            <p class="time-ago">5 hours ago</p>
+            <div class="company-logo-info">
+                <div class="logo-box" style="background-color: #FF5733;"></div>
+                <div>
+                    <h3 class="job-company-title">CleverTap</h3>
+                    <p class="job-role">UI/UX Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="job-meta">
+            <div class="job-info">
+                <p class="salary-range">$50k-$80k</p>
+                <div class="job-tags">
+                    <span class="tag">Apply via Company Website</span>
+                    <span class="tag">Remote</span>
+                    <span class="tag">Indonesian Only</span>
+                    <span class="tag">Internship</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
 
-                <a href="utama.php?page=jobdetail" class="job-card-link">
-                    <div class="job-card">
-                        <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
-                        </div>
-                        <label class="job-select">
-                            <input type="checkbox" class="job-checkbox" data-job-id="1">
-                        </label>
-                        <div class="job-details">
-                            <p class="time-ago">5 hours ago</p>
-                            <div class="company-logo-info">
-                                <div class="logo-box" style="background-color: #6C757D;"></div>
-                                <div>
-                                    <h3 class="job-company-title">River Spring Lodge</h3>
-                                    <p class="job-role">Data Analyst</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-info">
-                                <p class="salary-range">$50k-$80k</p>
-                                <div class="job-tags">
-                                    <span class="tag">Apply via External Website</span>
-                                    <span class="tag">Remote</span>
-                                    <span class="tag">Asian Only</span>
-                                    <span class="tag">Internship</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<a class="job-card-link">
+    <div class="job-card">
+        <div class="job-actions">
+            <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
+        </div>
+        <label class="job-select">
+            <input type="checkbox" class="job-checkbox" data-job-id="1">
+        </label>
+        <div class="job-details">
+            <p class="time-ago">5 hours ago</p>
+            <div class="company-logo-info">
+                <div class="logo-box" style="background-color: #6C757D;"></div>
+                <div>
+                    <h3 class="job-company-title">River Spring Lodge</h3>
+                    <p class="job-role">Data Analyst</p>
+                </div>
+            </div>
+        </div>
+        <div class="job-meta">
+            <div class="job-info">
+                <p class="salary-range">$50k-$80k</p>
+                <div class="job-tags">
+                    <span class="tag">Apply via External Website</span>
+                    <span class="tag">Remote</span>
+                    <span class="tag">Asian Only</span>
+                    <span class="tag">Internship</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
 
-                <a href="utama.php?page=jobdetail" class="job-card-link">
-                    <div class="job-card">
-                        <div class="job-actions">
-                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
-                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
-                        </div>
-                        <label class="job-select">
-                            <input type="checkbox" class="job-checkbox" data-job-id="1">
-                        </label>
-                        <div class="job-details">
-                            <p class="time-ago">5 hours ago</p>
-                            <div class="company-logo-info">
-                                <div class="logo-box" style="background-color: #FFD700;"></div>
-                                <div>
-                                    <h3 class="job-company-title">Lemon.io</h3>
-                                    <p class="job-role">Senior Graphic Designer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="job-info">
-                                <p class="salary-range">$50k-$80k</p>
-                                <div class="job-tags">
-                                    <span class="tag">Apply via Company Website</span>
-                                    <span class="tag">Remote</span>
-                                    <span class="tag">Asian Only</span>
-                                    <span class="tag">Internship</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+<a class="job-card-link">
+    <div class="job-card">
+        <div class="job-actions">
+            <button class="btn-edit" onclick="event.stopPropagation(); location.href='utama.php?page=editjob'">Edit</button>
+        </div>
+        <label class="job-select">
+            <input type="checkbox" class="job-checkbox" data-job-id="1">
+        </label>
+        <div class="job-details">
+            <p class="time-ago">5 hours ago</p>
+            <div class="company-logo-info">
+                <div class="logo-box" style="background-color: #FFD700;"></div>
+                <div>
+                    <h3 class="job-company-title">Lemon.io</h3>
+                    <p class="job-role">Senior Graphic Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="job-meta">
+            <div class="job-info">
+                <p class="salary-range">$50k-$80k</p>
+                <div class="job-tags">
+                    <span class="tag">Apply via Company Website</span>
+                    <span class="tag">Remote</span>
+                    <span class="tag">Asian Only</span>
+                    <span class="tag">Internship</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
             </div>
         </div>
 
@@ -478,5 +489,21 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
     </div>
+<script>
+document.querySelectorAll('.job-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    const bulkAction = document.getElementById("bulkAction").value;
+
+    // Kalau sedang memilih bulk action (delete/active/inactive), nonaktifkan klik card
+    if (["delete", "active", "inactive"].includes(bulkAction)) return;
+
+    // Kalau bukan tombol edit / checkbox baru arahkan ke previewjob
+    if (!e.target.closest('.btn-edit') && !e.target.closest('.job-checkbox')) {
+      window.location.href = 'utama.php?page=previewjob';
+    }
+  });
+});
+</script>
+
 </body>
 </html>

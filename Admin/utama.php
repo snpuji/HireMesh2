@@ -225,12 +225,12 @@
                 include "editjob.php";
             } elseif ($_GET['page'] == 'previewjob') {
                 include "previewjob.php";
-            } elseif ($_GET['page'] == 'course') {
-                include "course.php";
-            } elseif ($_GET['page'] == 'companyprofile') {
-                include "companyprofile.php";
-            } elseif ($_GET['page'] == 'hiremesh') {
-                include "hiremesh.php";
+            } elseif ($_GET['page'] == 'jobcategory') {
+                include "jobcategory.php";
+            } elseif ($_GET['page'] == 'categoryadd') {
+                include "categoryadd.php";
+            } elseif ($_GET['page'] == 'categoryedit') {
+                include "categoryedit.php";
             } elseif ($_GET['page'] == 'jobdetail') {
                 include "jobdetail.php";
             } else {
