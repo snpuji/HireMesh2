@@ -217,14 +217,14 @@
                 include "seeall.php";
             } elseif ($_GET['page'] == 'jobs') {
                 include "jobs.php";
-            } elseif ($_GET['page'] == 'findjob') {
-                include "findjob.php";
+            } elseif ($_GET['page'] == 'addjob') {
+                include "addjob.php";
             } elseif ($_GET['page'] == 'profile') {
                 include "profile.php";
-            } elseif ($_GET['page'] == 'editprofile') {
-                include "editprofile.php";
-            } elseif ($_GET['page'] == 'message') {
-                include "message.php";
+            } elseif ($_GET['page'] == 'editjob') {
+                include "editjob.php";
+            } elseif ($_GET['page'] == 'previewjob') {
+                include "previewjob.php";
             } elseif ($_GET['page'] == 'course') {
                 include "course.php";
             } elseif ($_GET['page'] == 'companyprofile') {

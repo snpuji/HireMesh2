@@ -25,12 +25,17 @@
                         <button id="applyActionBtn" class="apply-btn">Apply</button>
                     </div>
                 </div>
-                <button class="add-new-job-btn">+ Add New Job</button>
+                <a href="utama.php?page=addjob" class="add-new-job-btn">+ Add New Job</a>
+
             </div>
 
             <div class="job-list">
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
@@ -60,6 +65,10 @@
 
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
@@ -89,6 +98,10 @@
 
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
@@ -118,6 +131,10 @@
 
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
@@ -147,6 +164,10 @@
 
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
@@ -176,6 +197,10 @@
 
                 <a href="utama.php?page=jobdetail" class="job-card-link">
                     <div class="job-card">
+                        <div class="job-actions">
+                            <a href="utama.php?page=editjob" class="btn-edit">Edit</a>
+                            <a href="utama.php?page=previewjob" class="btn-preview">Preview</a>
+                        </div>
                         <label class="job-select">
                             <input type="checkbox" class="job-checkbox" data-job-id="1">
                         </label>
