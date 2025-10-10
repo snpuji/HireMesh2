@@ -56,8 +56,8 @@
         </a>
 
         <!-- Companies -->
-        <a href="utama.php?page=companies" 
-        class="menu-item <?= $page == 'companies' ? 'active' : '' ?>">
+        <a href="utama.php?page=company" 
+        class="menu-item <?= $page == 'company' ? 'active' : '' ?>">
         <img 
             src="../Images/building.png" 
             alt="Building Icon" 
@@ -233,6 +233,12 @@
                 include "categoryedit.php";
             } elseif ($_GET['page'] == 'jobdetail') {
                 include "jobdetail.php";
+            } elseif ($_GET['page'] == 'company') {
+                include "company.php";
+            } elseif ($_GET['page'] == 'addcompany') {
+                include "addcompany.php";
+            } elseif ($_GET['page'] == 'editcompany') {
+                include "editcompany.php";
             } else {
                 echo "<p>Page not found.</p>";
             }
