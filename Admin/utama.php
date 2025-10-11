@@ -143,6 +143,15 @@
       logoutModal.style.display = 'none';
     }
   });
+  const toggleBtn = document.getElementById('toggleSidebar');
+const sidebar = document.getElementById('sidebar');
+const mainContent = document.getElementById('mainContent');
+
+toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+    mainContent.classList.toggle('expanded');
+});
+
 </script>
 
 
@@ -251,6 +260,10 @@
                 include "editacademy.php";
             } elseif ($_GET['page'] == 'previewacademy') {
                 include "previewacademy.php";
+            } elseif ($_GET['page'] == 'message') {
+                include "message.php";
+            } elseif ($_GET['page'] == 'chat') {
+                include "chat.php";
             } else {
                 echo "<p>Page not found.</p>";
             }
