@@ -3,42 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add New Company</title>
+  <title>Add New Academy</title>
   <link rel="stylesheet" href="../css/addjob.css" />
 </head>
 <body>
   <div class="container2">
-    <h1>Add New Company</h1>
+    <h1>Add New Academy</h1>
 
-    <!-- STEP 1: COMPANY INFO -->
+    <!-- STEP 1: Academy INFO -->
     <div id="step1" class="form-section active">
-      <h2>Company Information</h2>
+      <h2>Academy Information</h2>
       <div class="form-group">
-        <label>Company Name</label>
-        <input type="text" id="companyName" class="form-input" placeholder="Enter company name">
+        <label>Academy Name</label>
+        <input type="text" id="AcademyName" class="form-input" placeholder="Enter Academy name">
       </div>
       <div class="form-group">
-        <label>Company Logo</label>
-        <input type="file" id="companyLogo" class="form-input">
+        <label>Academy Logo</label>
+        <input type="file" id="AcademyLogo" class="form-input">
       </div>
       <div class="form-group">
         <label>Website</label>
-        <input type="text" id="companyWebsite" class="form-input" placeholder="Enter company website">
+        <input type="text" id="AcademyWebsite" class="form-input" placeholder="Enter Academy website">
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input type="text" id="companyEmail" class="form-input" placeholder="Enter company email">
+        <input type="text" id="AcademyEmail" class="form-input" placeholder="Enter Academy email">
       </div>
       <div class="form-group">
         <label>Address</label>
-        <textarea id="companyAddress" class="form-input" placeholder="Enter company address"></textarea>
+        <textarea id="AcademyAddress" class="form-input" placeholder="Enter Academy address"></textarea>
       </div>
 
       <div class="button-row">
-  <a href="utama.php?page=company" class="btn btn-cancel">Cancel</a>
+  <a href="utama.php?page=academy" class="btn btn-cancel">Cancel</a>
   <div class="right-buttons">
     <button class="btn btn-save" id="saveBtn">Save</button>
-    <a href="utama.php?page=addjob" class="btn btn-add">Add Job</a>
+    <a href="utama.php?page=addcourse" class="btn btn-add">Add course</a>
   </div>
 </div>
 

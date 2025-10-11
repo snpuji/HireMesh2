@@ -239,6 +239,18 @@
                 include "addcompany.php";
             } elseif ($_GET['page'] == 'editcompany') {
                 include "editcompany.php";
+            } elseif ($_GET['page'] == 'previewcompany') {
+                include "previewcompany.php";
+            } elseif ($_GET['page'] == 'academy') {
+                include "academy.php";
+            } elseif ($_GET['page'] == 'addacademy') {
+                include "addacademy.php";
+            } elseif ($_GET['page'] == 'addcourse') {
+                include "addcourse.php";
+            } elseif ($_GET['page'] == 'editacademy') {
+                include "editacademy.php";
+            } elseif ($_GET['page'] == 'previewacademy') {
+                include "previewacademy.php";
             } else {
                 echo "<p>Page not found.</p>";
             }

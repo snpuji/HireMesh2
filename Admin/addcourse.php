@@ -11,11 +11,11 @@
 </head>
 <body>
   <div class="container2">
-    <h1>Add New Job</h1>
+    <h1>Add New Academy</h1>
 
-    <!-- STEP 1: COMPANY INFO -->
+    <!-- STEP 1: Academy INFO -->
     <div id="step1" class="form-section active">
-      <h2>Company Information</h2>
+      <h2>Academy Information</h2>
       <div class="form-group">
   <label>Academy Name</label>
   <select id="AcademyName" class="form-input" style="width: 100%;">
@@ -134,32 +134,33 @@
   color: #fff;
 }
 </style>
+
       <div class="form-group">
-        <label>Company Logo</label>
-        <input type="file" id="companyLogo" class="form-input">
+        <label>Academy Logo</label>
+        <input type="file" id="AcademyLogo" class="form-input">
       </div>
       <div class="form-group">
         <label>Website</label>
-        <input type="text" id="companyWebsite" class="form-input" placeholder="Enter company website">
+        <input type="text" id="AcademyWebsite" class="form-input" placeholder="Enter Academy website">
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input type="text" id="companyEmail" class="form-input" placeholder="Enter company email">
+        <input type="text" id="AcademyEmail" class="form-input" placeholder="Enter Academy email">
       </div>
       <div class="form-group">
         <label>Address</label>
-        <textarea id="companyAddress" class="form-input" placeholder="Enter company address"></textarea>
+        <textarea id="AcademyAddress" class="form-input" placeholder="Enter Academy address"></textarea>
       </div>
 
       <div class="button-row">
-        <a href="utama.php?page=jobs" class="btn btn-cancel">Cancel</a>
+        <a href="utama.php?page=academy" class="btn btn-cancel">Cancel</a>
         <button class="btn" id="nextBtn">Next →</button>
       </div>
     </div>
 
-    <!-- STEP 2: JOB DETAILS -->
+    <!-- STEP 2: Course DETAILS -->
     <div id="step2" class="form-section">
-      <h2>Job Details</h2>
+      <h2>Course Details</h2>
       <div id="jobContainer"></div>
 
       <button id="addJobBtn" class="btn">+ Add Another Job</button>
@@ -187,22 +188,22 @@
       const div = document.createElement("div");
       div.classList.add("job-entry");
       div.innerHTML = `
-        <h3>Job ${jobCount}</h3>
+        <h3>Course ${jobCount}</h3>
         <div class="form-group">
-          <label>Job Title</label>
-          <input type="text" name="jobTitle[]" class="form-input" placeholder="Enter job title">
+          <label>Course Title</label>
+          <input type="text" name="CourseTitle[]" class="form-input" placeholder="Enter Course title">
         </div>
         <div class="form-group">
           <label>Category</label>
-          <input type="text" name="jobCategory[]" class="form-input" placeholder="Enter category">
+          <input type="text" name="CourseCategory[]" class="form-input" placeholder="Enter category">
         </div>
         <div class="form-group">
           <label>Location</label>
-          <input type="text" name="jobLocation[]" class="form-input" placeholder="Enter job location">
+          <input type="text" name="CourseLocation[]" class="form-input" placeholder="Enter Course location">
         </div>
         <div class="form-group">
-          <label>Job Type</label>
-          <select name="jobType[]" class="form-input">
+          <label>Course Type</label>
+          <select name="CourseType[]" class="form-input">
             <option value="">Select type</option>
             <option value="Full Time">Full Time</option>
             <option value="Part Time">Part Time</option>
@@ -210,25 +211,16 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Apply Via</label>
-          <select name="jobType[]" class="form-input">
-            <option value="">Select type</option>
-            <option value="Easy Apply">Easy Apply</option>
-            <option value="Company Web">Company Web</option>
-            <option value="External Web">External Web</option>
-          </select>
-        </div>
-        <div class="form-group">
           <label>Salary</label>
-          <input type="text" name="jobSalary[]" class="form-input" placeholder="Enter salary range">
+          <input type="text" name="CourseSalary[]" class="form-input" placeholder="Enter salary range">
         </div>
         <div class="form-group">
           <label>Deadline</label>
-          <input type="date" name="jobDeadline[]" class="form-input">
+          <input type="date" name="CourseDeadline[]" class="form-input">
         </div>
         <div class="form-group">
           <label>Description</label>
-          <textarea name="jobDesc[]" class="form-input" placeholder="Enter job description"></textarea>
+          <textarea name="CourseDesc[]" class="form-input" placeholder="Enter Course description"></textarea>
         </div>
         <button type="button" class="btn-remove">Remove</button>
       `;
