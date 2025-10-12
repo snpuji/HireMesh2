@@ -264,6 +264,8 @@ toggleBtn.addEventListener('click', () => {
                 include "message.php";
             } elseif ($_GET['page'] == 'chat') {
                 include "chat.php";
+            } elseif ($_GET['page'] == 'revenue') {
+                include "revenue.php";
             } else {
                 echo "<p>Page not found.</p>";
             }
