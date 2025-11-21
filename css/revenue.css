@@ -1,0 +1,179 @@
+.apply-btn {
+      padding: 10px 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+      font-family: "Poppins", Helvetica, sans-serif;
+    }
+    .apply-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Tabs Styling */
+    .revenue-tabs {
+      display: flex;
+      gap: 30px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+      margin-top: 20px;
+    }
+
+    .revenue-tab {
+      font-family: "Poppins", Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 0;
+      cursor: pointer;
+      color: var(--text-2);
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .revenue-tab:hover {
+      color: var(--primary);
+    }
+
+    .revenue-tab.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    /* Table Content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .job-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .job-table th, .job-table td {
+      padding: 15px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      font-size: 14px;
+      color: var(--text-1);
+      font-family: "Poppins", Helvetica, sans-serif;
+    }
+    .job-table th {
+      background-color: var(--hoverbiru);
+      color: var(--text-1);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .job-table tbody tr:hover {
+      background-color: var(--hoverbiru);
+      transition: 0.2s ease;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .status-paid {
+      color: var(--primary);
+      background-color: var(--hoverbiru);
+    }
+
+    .status-pending {
+      color: var(--text-2);
+      background-color: var(--sidebar);
+    }
+
+    .dropdown-icon {
+      display: inline-block;
+      cursor: pointer;
+      color: var(--text-2);
+      margin-left: 4px;
+      font-size: 12px;
+    }
+
+    /* Checkbox styling */
+    .job-checkbox {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+
+    .select-all-checkbox {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    .status-container {
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.status-pending {
+  background-color: #f0ad4e;
+}
+.status-paid {
+  background-color: #28a745;
+}
+.status-cancel {
+  background-color: #dc3545;
+}
+
+/* Dropdown styling */
+.status-dropdown {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.status-dropdown div {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.status-dropdown div:hover {
+  background-color: #f5f5f5;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}

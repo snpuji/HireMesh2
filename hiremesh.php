@@ -61,31 +61,32 @@
             <h2 class="section-title">Courses</h2>
             
             <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image" style="background-image: url('/HireMesh2/Images/course1.png');">
-                        </div>
-                    <div class="course-content">
-                        <h3 class="course-title">DIGITAL MARKETING: FULLSTACK INTENSIVE BOOTCAMP</h3>
-                        <div class="course-meta">
-                            <div class="course-date">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                                05 Januari 2026
-                            </div>
-                            <div class="course-price">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-                                    <line x1="7" y1="7" x2="7.01" y2="7"/>
-                                </svg>
-                                Rp 650.000 <span class="price-original">Rp 1.100.000</span>
-                            </div>
-                        </div>
-                    </div>
+                <a href="utama.php?page=hiremeshcourse" class="course-card-link">
+    <div class="course-card">
+        <div class="course-image" style="background-image: url('/HireMesh2/Images/course1.png');"></div>
+        <div class="course-content">
+            <h3 class="course-title">DIGITAL MARKETING: FULLSTACK INTENSIVE BOOTCAMP</h3>
+            <div class="course-meta">
+                <div class="course-date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    05 Januari 2026
                 </div>
+                <div class="course-price">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                        <line x1="7" y1="7" x2="7.01" y2="7"/>
+                    </svg>
+                    Rp 650.000 <span class="price-original">Rp 1.100.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
 
                 <div class="course-card">
                     <div class="course-image" style="background-image: url('/HireMesh2/Images/course2.png');">

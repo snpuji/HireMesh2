@@ -73,6 +73,71 @@
     accent-color: #4A90E2;
     pointer-events: none; /* CRITICAL: Biar label yang handle click */
 }
+        .apply-btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      background: #0056b3;
+    }
+/* Filter dropdown */
+.filter-status {
+  padding: 8px 12px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-status:hover {
+  border-color: #3b82f6;
+}
+
+/* Biarkan tetap rapi dalam satu baris */
+.search-and-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
 
 </style>
 
@@ -83,6 +148,12 @@
                 <div class="bulk-actions">
                     <input type="checkbox" id="selectAll" class="select-all-checkbox" style="display: none;">
                     <label for="selectAll" id="selectAllLabel" style="display: none;">Select All</label>
+                    <!-- ✅ Filter -->
+      <select id="filterStatus" class="filter-status">
+        <option value="all">All Jobs</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
                     <select id="bulkAction">
                         <option value="">Bulk Action</option>
                         <option value="delete">Delete Selected</option>
@@ -98,7 +169,7 @@
         <div class="card-container">
             <!-- Card 1: Gao Tek Inc. -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -115,7 +186,7 @@
 
             <!-- Card 2: TenTwenty -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -132,7 +203,7 @@
 
             <!-- Card 3: CleverTqp -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -149,7 +220,7 @@
 
             <!-- Card 4: River Spring Lodge -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -166,7 +237,7 @@
 
             <!-- Card 5: Lemon.io -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -183,7 +254,7 @@
 
             <!-- Card 6: Lemon.io -->
             <div class="company-card-wrapper">
-                <a href="utama.php?page=companyprofile" class="company-card-link" data-card-link>
+                <a href="utama.php?page=previewcompany" class="company-card-link" data-card-link>
                     <div class="company-card">
                         <div class="job-actions">
                             <button class="btn-edit" onclick="event.stopPropagation(); event.preventDefault(); location.href='utama.php?page=editcompany'">Edit</button>
@@ -471,5 +542,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === activeModal) activeModal.style.display = 'none';
         if (e.target === inactiveModal) inactiveModal.style.display = 'none';
     });
+});
+// === FILTER STATUS ===
+document.getElementById('filterStatus').addEventListener('change', function() {
+  const selectedFilter = this.value;
+  const jobCards = document.querySelectorAll('.job-item'); // pastikan tiap job punya class "job-item"
+
+  jobCards.forEach(card => {
+    const status = card.getAttribute('data-status'); // misal data-status="active" atau "inactive"
+    if (selectedFilter === 'all' || status === selectedFilter) {
+      card.style.display = 'flex'; // tampilkan
+    } else {
+      card.style.display = 'none'; // sembunyikan
+    }
+  });
 });
 </script>

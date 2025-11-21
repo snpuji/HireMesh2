@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Categories</title>
   <link rel="stylesheet" href="../css/addjob.css" />
+  <link rel="stylesheet" href="../css/revenue.css" />
   <style>
-    .apply-btn {
+        .apply-btn {
       padding: 10px 20px;
       background: #007bff;
       color: white;
@@ -17,33 +18,63 @@
       font-weight: 600;
       transition: 0.3s;
     }
+
     .apply-btn:hover {
       background: #0056b3;
     }
-    .job-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    .job-table th, .job-table td {
-      padding: 15px;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: left;
-      font-size: 15px;
-      color: #333;
-    }
-    .job-table th {
-      background-color: #007bff;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    .job-table tbody tr:hover {
-      background-color: #f7f7f7;
-      transition: 0.2s ease;
-    }
-  </style>
+/* Filter dropdown */
+.filter-status {
+  padding: 8px 12px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-status:hover {
+  border-color: #3b82f6;
+}
+
+/* Biarkan tetap rapi dalam satu baris */
+.search-and-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+</style>
+
 </head>
 <body>
   <div class="container2">
@@ -54,6 +85,12 @@
         <div class="bulk-actions">
           <input type="checkbox" id="selectAllTop" class="select-all-checkbox" style="display:none;">
           <label for="selectAllTop" id="selectAllLabel" style="display:none;">Select All</label>
+          <!-- ✅ Filter -->
+      <select id="filterStatus" class="filter-status">
+        <option value="all">All Jobs</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
           <select id="bulkAction">
             <option value="">Bulk Action</option>
             <option value="delete">Delete Selected</option>
@@ -248,6 +285,20 @@
       bulkActionSelect.value = '';
       hideCheckboxes();
     }
+    // === FILTER STATUS ===
+document.getElementById('filterStatus').addEventListener('change', function() {
+  const selectedFilter = this.value;
+  const jobCards = document.querySelectorAll('.job-item'); // pastikan tiap job punya class "job-item"
+
+  jobCards.forEach(card => {
+    const status = card.getAttribute('data-status'); // misal data-status="active" atau "inactive"
+    if (selectedFilter === 'all' || status === selectedFilter) {
+      card.style.display = 'flex'; // tampilkan
+    } else {
+      card.style.display = 'none'; // sembunyikan
+    }
+  });
+});
   </script>
 </body>
 </html>

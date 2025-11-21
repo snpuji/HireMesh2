@@ -1,9 +1,12 @@
+<?php
+// Mulai session di paling atas untuk menampilkan pesan error
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/HireMesh2/Images/logo.png" />
     <title>Log In Form</title>
     <style>
@@ -16,9 +19,9 @@
         .container {
             background: white;
             border-radius: 24px;
-            padding: 40px 50px;  /* tadinya 50px, dikurangi biar border lebih keliatan */
+            padding: 40px 50px;
             width: 100%;
-            max-width: 550px;    /* biar lebih ramping, dari 600px jadi 480px */
+            max-width: 550px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             gap: 10px;
         }
@@ -47,11 +50,10 @@
         }
 
         .icon-wrapper .logo {
-            width: 120px; /* bisa disesuaikan */
+            width: 120px;
             height: auto;
         }
 
-        /* Background ganti dari gradient ke image */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: url("/HireMesh2/Images/Sign.png") no-repeat center center fixed;
@@ -210,23 +212,38 @@
         </button>
 
         <div class="icon-wrapper">
-            <img src="/HireMesh2/Images/logo.png" alt="Logo HireMesh" class="logo">
+            <img src="/HireMesh2/Images/logomark.png" alt="Logo HireMesh" class="logo">
         </div>
 
         <h1 class="title">Welcome Back</h1>
         <p class="subtitle">Please enter your details!</p>
 
-        <form id="signupForm">
+        <?php
+        // === BLOK TAMBAHAN UNTUK PESAN SUKSES ===
+        // (dari signup atau reset password)
+        if (isset($_SESSION['signup_success'])) {
+            echo '<p style="color: green; text-align: center; margin-bottom: 15px;">' . htmlspecialchars($_SESSION['signup_success']) . '</p>';
+            unset($_SESSION['signup_success']);
+        }
+        
+        // === BLOK UNTUK MENAMPILKAN ERROR LOGIN ===
+        if (isset($_SESSION['login_error'])) {
+            echo '<p style="color: red; text-align: center; margin-bottom: 15px;">' . htmlspecialchars($_SESSION['login_error']) . '</p>';
+            unset($_SESSION['login_error']);
+        }
+        ?>
+
+        <form action="login_process.php" method="POST">
 
             <div class="form-group">
                 <label>Email address <span class="required">*</span></label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
 
             <div class="form-group">
                 <label>Password <span class="required">*</span></label>
                 <div class="password-wrapper">
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required>
                     <button type="button" class="toggle-password" onclick="togglePassword()">
                         <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -238,10 +255,9 @@
 
             <div class="checkbox-wrapper">
                 <label class="checkbox-label">
-                    <input type="checkbox" id="remember">
-                    Remember me
+                    <input type="checkbox" id="remember" name="remember"> Remember me
                 </label>
-                <a href="#" class="forgot-link">Forgot password?</a>
+                <a href="forgot_password.php" class="forgot-link">Forgot password?</a>
             </div>
 
             <button type="submit" class="login-button">Log in</button>
@@ -261,11 +277,6 @@
                 passwordInput.type = 'password';
             }
         }
-
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submitted! This is a demo.');
-        });
     </script>
 </body>
 </html>

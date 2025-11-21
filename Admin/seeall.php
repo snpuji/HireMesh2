@@ -1,5 +1,5 @@
 
-    <div class="container">
+    <div class="container1">
             <!-- Scrollable Content -->
             <div class="content-area">
 

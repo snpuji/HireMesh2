@@ -23,6 +23,56 @@
     .apply-btn:hover {
       background: #0056b3;
     }
+/* Filter dropdown */
+.filter-status {
+  padding: 8px 12px;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-status:hover {
+  border-color: #3b82f6;
+}
+
+/* Biarkan tetap rapi dalam satu baris */
+.search-and-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}
 
 </style>
 <body>
@@ -30,21 +80,30 @@
         <!-- Konten Utama Jobs Page -->
         <div class="content-wrapper1">
             <div class="search-and-add">
-                <div class="action-bar">
-                    <div class="bulk-actions">
-                        <input type="checkbox" id="selectAll" class="select-all-checkbox" style="display: none;">
-                        <label for="selectAll" id="selectAllLabel" style="display: none;">Select All</label>
-                        <select id="bulkAction">
-                            <option value="">Bulk Action</option>
-                            <option value="delete">Delete Selected</option>
-                            <option value="active">Set Active</option>
-                            <option value="inactive">Set Inactive</option>
-                        </select>
-                        <button id="applyActionBtn" class="apply-btn">Apply</button>
-                    </div>
-                </div>
-                <a href="utama.php?page=addjob" class="add-new-job-btn">+ Add New Job</a>
-            </div>
+  <div class="action-bar">
+    <div class="bulk-actions">
+        <input type="checkbox" id="selectAll" class="select-all-checkbox" style="display: none;"> 
+        <label for="selectAll" id="selectAllLabel" style="display: none;">Select All</label>
+      <!-- ✅ Filter -->
+      <select id="filterStatus" class="filter-status">
+        <option value="all">All Jobs</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+
+      <!-- ✅ Bulk Action -->
+      <select id="bulkAction">
+        <option value="">Bulk Action</option>
+        <option value="delete">Delete Selected</option>
+        <option value="active">Set Active</option>
+        <option value="inactive">Set Inactive</option>
+      </select>
+      <button id="applyActionBtn" class="apply-btn">Apply</button>
+    </div>
+  </div>
+  <a href="utama.php?page=addjob" class="add-new-job-btn">+ Add New Job</a>
+</div>
+
 
             <div class="job-list">
                 <a class="job-card-link">
@@ -503,6 +562,21 @@ document.querySelectorAll('.job-card').forEach(card => {
     }
   });
 });
+// === FILTER STATUS ===
+document.getElementById('filterStatus').addEventListener('change', function() {
+  const selectedFilter = this.value;
+  const jobCards = document.querySelectorAll('.job-item'); // pastikan tiap job punya class "job-item"
+
+  jobCards.forEach(card => {
+    const status = card.getAttribute('data-status'); // misal data-status="active" atau "inactive"
+    if (selectedFilter === 'all' || status === selectedFilter) {
+      card.style.display = 'flex'; // tampilkan
+    } else {
+      card.style.display = 'none'; // sembunyikan
+    }
+  });
+});
+
 </script>
 
 </body>
